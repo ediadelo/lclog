@@ -12,7 +12,7 @@ yourfile.js:101 : a=23
 
 */
 
-function EKOX(txt) {
+function LOG(txt) {
     var thisline = new Error().lineNumber
     const error = new Error();
     var stack = error.stack.split('\n')
@@ -38,7 +38,7 @@ function EKOX(txt) {
     }
     l = EKOTable[file];
     vv = l[nl-1];
-    re = new RegExp(" *EKOX\\(([^\\)]+)\\) *;");
+    re = new RegExp(" *LOG\\(([^\\)]+)\\) *;");
     var result = re.exec(vv);
     vvn = result[1];
     console.log(file + ":" + nl + ":" + vvn + "=" + txt);
